@@ -1,0 +1,23 @@
+body{
+    background: rgb(223, 223, 223);
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    float: left;
+    padding: 20px;
+    
+}
+header .container{
+    padding-top: 20px;
+}
+
+header .row{
+    padding: 20px;
+}
+footer .col{
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}

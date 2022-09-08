@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assignment2.css">
+</head>
+<body>
+    <header>
+        <div class="container mb-3">
+            <form action="">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img src="anime.jpg" alt="">
+                            <h3 id="t_nama">Yusuf Agung Habibi</h3>
+                            <p id="t_role">Web Development</p>
+                            <div class="mb-5"></div>
+                            <button type="button" onclick="edit()" class="btn btn-primary" id="btn-edit">Edit</button>
+                            <a href="#" class="btn" style="border-color: black; color:green;">Resume</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>Availability</p>
+                            <p>Usia</p>
+                            <p>Lokasi</p>
+                            <p>Pengalaman</p>
+                            <p>Email</p>
+                        </div>
+                        <div class="col">
+                            <p id="t_availability">Full Time</p>
+                            <p id="t_usia">22</p>
+                            <p id="t_lokasi">Pekanbaru</p>
+                            <p id="t_exp">0</p>
+                            <p id="t_email">yusuf@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+    <footer>
+    <div class="container">
+        
+            <form action="" id="form-DataDiri">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="Nama" class="form-label">Nama</label>
+                        <input type="text" id="nama" class="form-control" name="Nama" placeholder="Nama Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Role" class="form-label">Role</label>
+                        <input type="text" id="role" class="form-control" name="Role" placeholder="Role Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Availability" class="form-label">Availability</label>
+                        <input type="text" id="availability" class="form-control" name="Availability" placeholder="Availability Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Usia" class="form-label">Usia</label>
+                        <input type="number" id="usia" class="form-control" name="Usia" placeholder="Usia Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Lokasi" class="form-label">Lokasi</label>
+                        <input type="text" id="lokasi" class="form-control" name="Lokasi" placeholder="Lokasi Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Years Experience" class="form-label">Years Experience</label>
+                        <input type="number" id="exp" class="form-control" name="Years Experience" placeholder="Years Experience Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" name="Email" placeholder="Email Anda">
+                    </div>
+                    <div class="mb-3">
+                        <button type="button" onclick="kirim()" class="btn btn-success form-control" id="btn-submit">Submit</button>
+                    
+                    </div>
+                </div>
+                
+            </form>
+
+
+    </div>
+</footer>
+<script>
+    
+    var id_tampilNama = document.getElementById("t_nama");
+    var id_tampilRole = document.getElementById("t_role");
+    var id_tampilAvailability = document.getElementById("t_availability");
+    var id_tampilUsia = document.getElementById("t_usia");
+    var id_tampilLokasi = document.getElementById("t_lokasi");
+    var id_tampilExp = document.getElementById("t_exp");
+    var id_tampilEmail = document.getElementById("t_email");
+
+    var id_nama = document.getElementById("nama");
+    var id_role = document.getElementById("role");
+    var id_availability = document.getElementById("availability");
+    var id_usia = document.getElementById("usia");
+    var id_lokasi = document.getElementById("lokasi");
+    var id_exp = document.getElementById("exp");
+    var id_email = document.getElementById("email");
+
+    
+    function kirim(){
+        id_tampilNama.innerText = id_nama.value; 
+        id_tampilRole.innerText = id_role.value;
+        id_tampilAvailability.innerText = id_availability.value;
+        id_tampilUsia.innerText = id_usia.value;
+        id_tampilLokasi.innerText = id_lokasi.value;
+        id_tampilExp.innerText = id_exp.value;
+        id_tampilEmail.innerText = id_email.value;
+      } 
+
+      function edit(){
+        document.getElementById("nama").value = id_tampilNama.innerText;
+        document.getElementById("role").value = id_tampilRole.innerText;
+        document.getElementById("availability").value = id_tampilAvailability.innerText;
+        document.getElementById("usia").value = id_tampilUsia.innerText;
+        document.getElementById("lokasi").value = id_tampilLokasi.innerText;
+        document.getElementById("exp").value = id_tampilExp.innerText;
+        document.getElementById("email").value = id_tampilEmail.innerText;
+      }
+      </script>
+
+</body>
+</html>
